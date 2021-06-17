@@ -1,0 +1,17 @@
+---
+-  hosts: 172.31.36.62
+   become: yes
+   tasks: 
+   - include_tasks: file.yml
+   - name: i want webserver on Debian node
+     apt:
+      name: apache2
+      state: present
+   - name: i want start webserver on Debian node
+     service: 
+      name: apache2
+      state: present
+   - name: i want copy index.j2 on Debian node
+     template:
+        src: index.j2
+        dest: /var/www/html/index.html

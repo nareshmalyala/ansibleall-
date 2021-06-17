@@ -1,0 +1,6 @@
+
+mywebpackageforDebian: apache2
+mywebpackageforredhat: httpd
+
+myjavapackonDebian: openjdk-8-jre
+myjavapackonredhat: java-1.8.0-openjdk

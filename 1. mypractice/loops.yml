@@ -1,0 +1,12 @@
+---
+- hosts: 172.31.36.62
+  become: yes
+  tasks: 
+  - name: i want install git
+    apt:
+     name: "{{ item }}"
+     state: present
+    loop:
+    - git 
+    - tree
+    - wget

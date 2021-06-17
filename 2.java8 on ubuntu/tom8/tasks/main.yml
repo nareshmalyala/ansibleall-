@@ -1,0 +1,12 @@
+---
+- include_tasks: myjava.yml
+- include_tasks: createusergroup.yml
+- include_tasks: download.yml
+- include_tasks: extract.yml
+- include_tasks: permissions.yml
+- include_tasks: tomcatservice.yml
+- include_tasks: tomcatstart.yml
+- include_tasks: tomactuser.yml
+- include_tasks: tomcatrestart.yml
+- include_tasks: appdeploy.yml
+

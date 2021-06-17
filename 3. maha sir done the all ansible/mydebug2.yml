@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.44.79 
+  become: yes
+  vars:
+    myvars: git
+
+  tasks:
+  - name: disply myvars
+    debug:
+      msg: "{{myvars}}"
+  - name: disply myjavapackonubuntu
+    debug:
+      msg: "{{myjavapackonubuntu}}"

@@ -1,0 +1,5 @@
+
+  - name: i want to create file on ubuntu node side
+    file:
+      path: /home/ubuntu/test.txt
+      state: touch 

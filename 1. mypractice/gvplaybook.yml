@@ -1,0 +1,26 @@
+---
+- hosts: webservers 
+  become: yes
+  tasks: 
+  - name: i want install webserver on Debian node
+    apt:
+      name: "{{ mywebpackageforDebian }}"
+      state: present
+    when: ansible_os_family == "Debian"
+  - name: i want to service start on Debian node
+    service:
+      name: "{{ mywebpackageforDebian }}"
+      state: started
+    when: ansible_os_family == "Debian"
+
+  - name: i want install webserver on RedHat node
+    yum:
+      name: "{{ mywebpackageforredhat }}"
+      state: present
+    when: ansible_os_family == "RedHat" 
+  - name: i want to service start on RedHat node
+    service:
+      name: "{{ mywebpackageforredhat }}"
+      state: started
+    when: ansible_os_family == "RedHat"
+     

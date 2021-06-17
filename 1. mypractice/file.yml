@@ -1,0 +1,4 @@
+- name: i want create file on Debian node
+  file:
+    path: /hoome/Debian/test.txt
+    state: touch

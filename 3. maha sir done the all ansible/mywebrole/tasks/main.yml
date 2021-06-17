@@ -1,0 +1,6 @@
+---
+# tasks file for mywebrole
+
+- name: install webserver on ubntu node
+  apt:
+   name: apache2

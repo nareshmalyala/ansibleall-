@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  become: yes
+  tasks: 
+  - name: create ansible ubuntu nodes 
+    ec2: 
+      key_name: Ansible
+      instance_type: t2.micro
+      image: ami-0f94dec69d000f677
+      wait: yes
+      group: Ansible_SG
+      region: us-east-2
+      count: 2
+      vpc_subnet_id: subnet-f84318b4
+      assign_public_ip: yes
+      instance_tags:
+        name: ubuntunodes

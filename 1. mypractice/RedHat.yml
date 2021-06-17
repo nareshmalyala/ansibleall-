@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: i want install webserver install RedHat nodes
+    apt:
+      name: httpd
+      state: present
+  - name: i want to restart webserver on RedHat nodes
+    service:
+      name: httpd
+      state: restarted
+  - name: i want install tree
+    apt:
+      name: tree
+      state: absent
+  - name: i want install wget
+    apt:
+      name: wget
+      state: present

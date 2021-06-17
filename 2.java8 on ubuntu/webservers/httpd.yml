@@ -1,0 +1,13 @@
+---
+- hosts: 
+  become: yes
+  tasks:
+  - name: i want install webserver on RedHat node
+    yum:
+     name: httpd
+     state: present
+    when: ansible_os_family=="RedHat"  
+  - name: i want start the RedHat node
+    service:
+     name: httpd
+     state: started

@@ -1,0 +1,16 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: i want install java on Debian 
+    apt:
+      name: "{{ myjavapackonDebian }}"
+      state: present
+    when: ansible_os_family=="Debian"
+  - name: i want install java on redhat
+    yum:
+      name: "{{ myjavapackonredhat }}"
+      state: present
+    when: ansible_os_family=="RedHot"
+
+

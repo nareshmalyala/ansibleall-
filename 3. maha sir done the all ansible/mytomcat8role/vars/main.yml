@@ -1,0 +1,4 @@
+---
+# vars file for mytomcat8role
+mysqlusername: admin
+mysqlpasswd: maha123!
